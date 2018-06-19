@@ -1,0 +1,12 @@
+version: '2'
+services:
+  code:
+    image: busybox
+    container_name: 'code'
+    tty: true
+    volumes:
+      - sync-volume:/var/www/
+
+volumes:
+  sync-volume:
+    external: true
